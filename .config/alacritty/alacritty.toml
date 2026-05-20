@@ -1,0 +1,64 @@
+
+# [window]
+# opacity = 0.50
+# decorations = "buttonless"
+# startup_mode = "Fullscreen"
+# padding = { x = 10, y = 10 }
+# blur=true
+# animation = "EaseOutExpo" #=>works in unofficial build
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+size = 20
+
+# [colors.primary]
+# background = "0x0f0f0f"
+# foreground = "0xe0e0e0"
+
+
+
+[window]
+dynamic_padding = false
+decorations = "buttonless"
+startup_mode = "SimpleFullScreen"
+padding = { x = 2, y = 0 }
+blur = true # Enforces macOS to blur the background behind the transparency
+opacity = 0.70 # 🎯 REQUIRED: Tells Alacritty to allow window transparency
+
+[colors.primary]
+# 🎯 FIXED: Changed '0x0f0f0f80' to a standard '#' web hex string
+background = "#0f0f0f" 
+foreground = "#e0e0e0"
+
+[colors.cursor]
+text = "#0b0f19"       # Inverts your text cleanly over the orange cursor
+cursor = "#ff4500"
+
+# [colors.cursor]
+# text = "#ff5000"
+# cursor = "#ff4500"
+
+[font.offset]
+x = 0
+y = 0
+
+[font.glyph_offset]
+x = 0
+y = 0  # Try changing this to 1 or -1
+
+[cursor]
+style = "Beam"
+
+[keyboard]
+bindings = [
+  { key = "N", mods = "Command", action = "SpawnNewInstance" },
+  { key = "F", mods = "Command", action = "ToggleFullscreen" },
+  { key = "S", mods = "Command", chars = "\u0013" }
+]
+
+[bell]
+animation = "EaseOutQuad"
+duration = 200
+color = "#ff4500"
+
+
+
